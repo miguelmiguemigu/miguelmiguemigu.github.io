@@ -1,13 +1,15 @@
+/* General Styles */
 * {
     background: #1c1c1c;
     color: #e1e1e1;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.center {
+/* Center the main text */
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,15 +18,65 @@
     text-align: center;
 }
 
+/* Heading Styles */
 h1 {
-    font-size: 4rem;
+    font-size: 12rem;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-family: "Kihim", sans-serif; /* Apply Kihim font */
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-weight: 300;
     margin-bottom: 10px;
     opacity: 0.8;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Socials Section */
+.socials {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.socials ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.socials li {
+    margin: 5px 0;
+}
+
+/* Links */
+.socials a {
+    text-decoration: none;
+    color: #e1e1e1;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition:
+        transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
